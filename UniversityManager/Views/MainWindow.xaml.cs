@@ -26,24 +26,43 @@ namespace UniversityManager.Views
             InitializeComponent();
         }
 
-        private void viewStudentsButton_Click(object sender, RoutedEventArgs e)
+        private void ShowWindow(Window window)
         {
             Hide();
 
-            var studentsWindow = new StudentsWindow();
-            studentsWindow.ShowDialog();
+            window.ShowDialog();
 
             ShowDialog();
         }
 
+        private void viewStudentsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var studentsWindow = new StudentsWindow();
+            ShowWindow(studentsWindow);
+        }
+
         private void viewTeachersButton_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
-
             var teacherWindow = new TeachersWindow();
-            teacherWindow.ShowDialog();
+            ShowWindow(teacherWindow);
+        }
 
-            ShowDialog();
+        private void viewDisciplinesButton_Click(object sender, RoutedEventArgs e)
+        {
+            var disciplineWindow = new DisciplinesWindow();
+            ShowWindow(disciplineWindow);
+        }
+
+        private void viewGroupsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var groupsWindow = new GroupsWindow();
+            ShowWindow(groupsWindow);
+        }
+
+        private void viewSpecialtiesButton_Click(object sender, RoutedEventArgs e)
+        {
+            var specialtiesWindow = new SpecialtiesWindow();
+            ShowWindow(specialtiesWindow);
         }
     }
 }

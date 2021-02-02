@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace UniversityManager.Views
 {
     /// <summary>
-    /// Interaction logic for DisciplinesWindow.xaml
+    /// Interaction logic for GroupsWindow.xaml
     /// </summary>
-    public partial class DisciplinesWindow : Window
+    public partial class GroupsWindow : Window
     {
-        public DisciplinesWindow()
+        public GroupsWindow()
         {
             InitializeComponent();
         }
@@ -28,7 +28,8 @@ namespace UniversityManager.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var context = new UniversityEntities();
-            listTeacherDiscipline.ItemsSource = context.TeacherDisciplines.ToList();
+
+            listGroups.ItemsSource = context.Groups.ToList();
         }
     }
 }

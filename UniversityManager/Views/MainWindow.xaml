@@ -10,8 +10,8 @@
     <Grid>
         <Button x:Name="viewStudentsButton" Content="Студенты" HorizontalAlignment="Left" Margin="84,50,0,0" VerticalAlignment="Top" Width="253" Height="32" Click="viewStudentsButton_Click"/>
         <Button x:Name="viewTeachersButton" Content="Преподаватели" HorizontalAlignment="Left" Margin="84,202,0,0" VerticalAlignment="Top" Width="253" Height="32" Click="viewTeachersButton_Click"/>
-        <Button x:Name="viewDisciplinesButton" Content="Дисциплины" HorizontalAlignment="Left" Margin="84,164,0,0" VerticalAlignment="Top" Width="253" Height="32"/>
-        <Button x:Name="viewGroupsButton" Content="Группы" HorizontalAlignment="Left" Margin="84,126,0,0" VerticalAlignment="Top" Width="253" Height="32"/>
-        <Button x:Name="viewSpecialtiesButton" Content="Специальности" HorizontalAlignment="Left" Margin="84,88,0,0" VerticalAlignment="Top" Width="253" Height="32"/>
+        <Button x:Name="viewDisciplinesButton" Content="Дисциплины" HorizontalAlignment="Left" Margin="84,164,0,0" VerticalAlignment="Top" Width="253" Height="32" Click="viewDisciplinesButton_Click"/>
+        <Button x:Name="viewGroupsButton" Content="Группы" HorizontalAlignment="Left" Margin="84,126,0,0" VerticalAlignment="Top" Width="253" Height="32" Click="viewGroupsButton_Click"/>
+        <Button x:Name="viewSpecialtiesButton" Content="Специальности" HorizontalAlignment="Left" Margin="84,88,0,0" VerticalAlignment="Top" Width="253" Height="32" Click="viewSpecialtiesButton_Click"/>
     </Grid>
 </Window>

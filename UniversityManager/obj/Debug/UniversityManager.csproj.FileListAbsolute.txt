@@ -25,3 +25,7 @@ C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\TeachersWindow.g
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\TeachersWindow.baml
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\DisciplinesWindow.g.cs
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\DisciplinesWindow.baml
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\GroupsWindow.g.cs
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\GroupsWindow.baml
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\SpecialtiesWindow.g.cs
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\SpecialtiesWindow.baml
