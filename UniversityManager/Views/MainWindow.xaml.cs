@@ -26,12 +26,22 @@ namespace UniversityManager.Views
             InitializeComponent();
         }
 
-        private void ViewStudentsButton_Click(object sender, RoutedEventArgs e)
+        private void viewStudentsButton_Click(object sender, RoutedEventArgs e)
         {
             Hide();
 
             var studentsWindow = new StudentsWindow();
             studentsWindow.ShowDialog();
+
+            ShowDialog();
+        }
+
+        private void viewTeachersButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+
+            var teacherWindow = new TeachersWindow();
+            teacherWindow.ShowDialog();
 
             ShowDialog();
         }

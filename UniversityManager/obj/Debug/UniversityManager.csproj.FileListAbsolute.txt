@@ -21,3 +21,7 @@ C:\Users\Student\source\repos\UniversityManager\bin\Debug\Models.pdb
 C:\Users\Student\source\repos\UniversityManager\bin\Debug\Models.dll.config
 C:\Users\Student\source\repos\UniversityManager\bin\Debug\EntityFramework.xml
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\UniversityManager.csproj.CopyComplete
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\TeachersWindow.g.cs
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\TeachersWindow.baml
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\DisciplinesWindow.g.cs
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\DisciplinesWindow.baml
