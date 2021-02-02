@@ -1,0 +1,10 @@
+C:\Users\Student\source\repos\Models\bin\Debug\Models.dll.config
+C:\Users\Student\source\repos\Models\bin\Debug\Models.dll
+C:\Users\Student\source\repos\Models\bin\Debug\Models.pdb
+C:\Users\Student\source\repos\Models\bin\Debug\EntityFramework.dll
+C:\Users\Student\source\repos\Models\bin\Debug\EntityFramework.xml
+C:\Users\Student\source\repos\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Student\source\repos\Models\obj\Debug\Models.dll
+C:\Users\Student\source\repos\Models\obj\Debug\Models.pdb
