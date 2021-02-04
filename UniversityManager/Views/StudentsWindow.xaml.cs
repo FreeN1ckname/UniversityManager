@@ -31,5 +31,15 @@ namespace UniversityManager.Views
 
             listStudents.ItemsSource = context.Students.ToList();
         }
+
+        private void listStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var student = listStudents.SelectedItem as Student;
+            var editor = new StudentEditorWindow(student);
+
+            Hide();
+            editor.ShowDialog();
+            ShowDialog();
+        }
     }
 }

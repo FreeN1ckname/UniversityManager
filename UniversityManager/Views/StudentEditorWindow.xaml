@@ -1,0 +1,21 @@
+﻿<Window x:Class="UniversityManager.Views.StudentEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UniversityManager.Views"
+        mc:Ignorable="d"
+        Title="Редактирование" Height="272.244" Width="649.376">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Image x:Name="image" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="223"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="nameBlock"/>
+                <TextBlock x:Name="surnameBlock"/>
+                <TextBlock x:Name="birthdayBlock"/>
+                <ListBox x:Name="listGenders"/>
+                <ListBox x:Name="listGroups"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

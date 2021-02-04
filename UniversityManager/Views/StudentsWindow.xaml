@@ -42,7 +42,7 @@
     </Window.Resources>
 
     <Grid>
-        <ListBox x:Name="listStudents" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">            
+        <ListBox x:Name="listStudents" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDoubleClick="listStudents_MouseDoubleClick">            
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />

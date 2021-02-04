@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Student\source\repos\UniversityManager\App.xaml
-6213919675
+7439843103
 
-11185970921
+12-1565228433
 17-1250111422
-Views\DisciplinesWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\StudentsWindow.xaml;Views\TeachersWindow.xaml;
+Views\DisciplinesWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\StudentEditorWindow.xaml;Views\StudentsWindow.xaml;Views\TeachersWindow.xaml;
 
 True
 

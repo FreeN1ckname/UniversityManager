@@ -69,6 +69,9 @@
     <Compile Include="Views\SpecialtiesWindow.xaml.cs">
       <DependentUpon>SpecialtiesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StudentEditorWindow.xaml.cs">
+      <DependentUpon>StudentEditorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentsWindow.xaml.cs">
       <DependentUpon>StudentsWindow.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\SpecialtiesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentEditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
