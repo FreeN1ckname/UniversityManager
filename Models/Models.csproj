@@ -102,6 +102,7 @@
       <LastGenOutput>UniversityModel.Context.cs</LastGenOutput>
       <DependentUpon>UniversityModel.edmx</DependentUpon>
     </Content>
+    <Content Include="UniversityModel.edmx.sql" />
     <Content Include="UniversityModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UniversityModel.edmx</DependentUpon>

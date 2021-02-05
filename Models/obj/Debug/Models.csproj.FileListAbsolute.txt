@@ -8,3 +8,13 @@ C:\Users\Student\source\repos\Models\obj\Debug\Models.csproj.CoreCompileInputs.c
 C:\Users\Student\source\repos\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\Student\source\repos\Models\obj\Debug\Models.dll
 C:\Users\Student\source\repos\Models\obj\Debug\Models.pdb
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\bin\Debug\Models.dll.config
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\bin\Debug\Models.dll
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\bin\Debug\Models.pdb
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\obj\Debug\Models.dll
+C:\Users\Dimab\Desktop\universityProject1\UniversityManager\Models\obj\Debug\Models.pdb

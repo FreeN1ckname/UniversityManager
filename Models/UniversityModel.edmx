@@ -4,157 +4,156 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Discipline">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Group">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="YearFormation" Type="int" Nullable="false" />
-          <Property Name="SpecialtyId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Specialty">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Info" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Student">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar(max)" />
-          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Birthday" Type="date" Nullable="false" />
-          <Property Name="GroupId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Teacher">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar(max)" />
-          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="StartYear" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="TeacherDiscipline">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AcademicYearStart" Type="int" Nullable="false" />
-          <Property Name="AcademicYearEnd" Type="int" Nullable="false" />
-          <Property Name="TotalHours" Type="int" Nullable="false" />
-          <Property Name="GroupId" Type="int" Nullable="false" />
-          <Property Name="TeacherId" Type="int" Nullable="false" />
-          <Property Name="DisciplineId" Type="int" Nullable="false" />
-        </EntityType>
-        <Association Name="FK_Group_Specialty">
-          <End Role="Specialty" Type="Self.Specialty" Multiplicity="1" />
-          <End Role="Group" Type="Self.Group" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Specialty">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Group">
-              <PropertyRef Name="SpecialtyId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Student_Group">
-          <End Role="Group" Type="Self.Group" Multiplicity="1" />
-          <End Role="Student" Type="Self.Student" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Group">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Student">
-              <PropertyRef Name="GroupId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TeacherDiscipline_Discipline">
-          <End Role="Discipline" Type="Self.Discipline" Multiplicity="1" />
-          <End Role="TeacherDiscipline" Type="Self.TeacherDiscipline" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Discipline">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherDiscipline">
-              <PropertyRef Name="DisciplineId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TeacherDiscipline_Group">
-          <End Role="Group" Type="Self.Group" Multiplicity="1" />
-          <End Role="TeacherDiscipline" Type="Self.TeacherDiscipline" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Group">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherDiscipline">
-              <PropertyRef Name="GroupId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TeacherDiscipline_Teacher">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="TeacherDiscipline" Type="Self.TeacherDiscipline" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherDiscipline">
-              <PropertyRef Name="TeacherId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="UniversityModelStoreContainer">
-          <EntitySet Name="Discipline" EntityType="Self.Discipline" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Specialty" EntityType="Self.Specialty" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TeacherDiscipline" EntityType="Self.TeacherDiscipline" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Group_Specialty" Association="Self.FK_Group_Specialty">
-            <End Role="Specialty" EntitySet="Specialty" />
-            <End Role="Group" EntitySet="Group" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
-            <End Role="Group" EntitySet="Group" />
-            <End Role="Student" EntitySet="Student" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TeacherDiscipline_Discipline" Association="Self.FK_TeacherDiscipline_Discipline">
-            <End Role="Discipline" EntitySet="Discipline" />
-            <End Role="TeacherDiscipline" EntitySet="TeacherDiscipline" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TeacherDiscipline_Group" Association="Self.FK_TeacherDiscipline_Group">
-            <End Role="Group" EntitySet="Group" />
-            <End Role="TeacherDiscipline" EntitySet="TeacherDiscipline" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TeacherDiscipline_Teacher" Association="Self.FK_TeacherDiscipline_Teacher">
-            <End Role="Teacher" EntitySet="Teacher" />
-            <End Role="TeacherDiscipline" EntitySet="TeacherDiscipline" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="UniversityModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UniversityModelStoreContainer">
+    <EntitySet Name="Disciplines" EntityType="UniversityModel.Store.Disciplines" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groups" EntityType="UniversityModel.Store.Groups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Specialties" EntityType="UniversityModel.Store.Specialties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="UniversityModel.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="UniversityModel.Store.Teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeacherDisciplines" EntityType="UniversityModel.Store.TeacherDisciplines" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TeacherDiscipline_Discipline" Association="UniversityModel.Store.FK_TeacherDiscipline_Discipline">
+      <End Role="Discipline" EntitySet="Disciplines" />
+      <End Role="TeacherDiscipline" EntitySet="TeacherDisciplines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Group_Specialty" Association="UniversityModel.Store.FK_Group_Specialty">
+      <End Role="Specialty" EntitySet="Specialties" />
+      <End Role="Group" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Group" Association="UniversityModel.Store.FK_Student_Group">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeacherDiscipline_Group" Association="UniversityModel.Store.FK_TeacherDiscipline_Group">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="TeacherDiscipline" EntitySet="TeacherDisciplines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeacherDiscipline_Teacher" Association="UniversityModel.Store.FK_TeacherDiscipline_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="TeacherDiscipline" EntitySet="TeacherDisciplines" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Disciplines">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="YearFormation" Type="int" Nullable="false" />
+    <Property Name="SpecialtyId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Specialties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Info" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Birthday" Type="datetime" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherDisciplines">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicYearStart" Type="int" Nullable="false" />
+    <Property Name="AcademicYearEnd" Type="int" Nullable="false" />
+    <Property Name="TotalHours" Type="int" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="TeacherId" Type="int" Nullable="false" />
+    <Property Name="DisciplineId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TeacherDiscipline_Discipline">
+    <End Role="Discipline" Type="UniversityModel.Store.Disciplines" Multiplicity="1" />
+    <End Role="TeacherDiscipline" Type="UniversityModel.Store.TeacherDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discipline">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeacherDiscipline">
+        <PropertyRef Name="DisciplineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Group_Specialty">
+    <End Role="Specialty" Type="UniversityModel.Store.Specialties" Multiplicity="1" />
+    <End Role="Group" Type="UniversityModel.Store.Groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specialty">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="SpecialtyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Group">
+    <End Role="Group" Type="UniversityModel.Store.Groups" Multiplicity="1" />
+    <End Role="Student" Type="UniversityModel.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeacherDiscipline_Group">
+    <End Role="Group" Type="UniversityModel.Store.Groups" Multiplicity="1" />
+    <End Role="TeacherDiscipline" Type="UniversityModel.Store.TeacherDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeacherDiscipline">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeacherDiscipline_Teacher">
+    <End Role="Teacher" Type="UniversityModel.Store.Teachers" Multiplicity="1" />
+    <End Role="TeacherDiscipline" Type="UniversityModel.Store.TeacherDisciplines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeacherDiscipline">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UniversityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -320,77 +319,76 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
-          <EntitySetMapping Name="Disciplines">
-            <EntityTypeMapping TypeName="UniversityModel.Discipline">
-              <MappingFragment StoreEntitySet="Discipline">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Groups">
-            <EntityTypeMapping TypeName="UniversityModel.Group">
-              <MappingFragment StoreEntitySet="Group">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="YearFormation" ColumnName="YearFormation" />
-                <ScalarProperty Name="SpecialtyId" ColumnName="SpecialtyId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Specialties">
-            <EntityTypeMapping TypeName="UniversityModel.Specialty">
-              <MappingFragment StoreEntitySet="Specialty">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Info" ColumnName="Info" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="UniversityModel.Student">
-              <MappingFragment StoreEntitySet="Student">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
-                <ScalarProperty Name="Surname" ColumnName="Surname" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
-                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Teachers">
-            <EntityTypeMapping TypeName="UniversityModel.Teacher">
-              <MappingFragment StoreEntitySet="Teacher">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Photo" ColumnName="Photo" />
-                <ScalarProperty Name="Surname" ColumnName="Surname" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="StartYear" ColumnName="StartYear" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TeacherDisciplines">
-            <EntityTypeMapping TypeName="UniversityModel.TeacherDiscipline">
-              <MappingFragment StoreEntitySet="TeacherDiscipline">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="AcademicYearStart" ColumnName="AcademicYearStart" />
-                <ScalarProperty Name="AcademicYearEnd" ColumnName="AcademicYearEnd" />
-                <ScalarProperty Name="TotalHours" ColumnName="TotalHours" />
-                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
-                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
-                <ScalarProperty Name="DisciplineId" ColumnName="DisciplineId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
+    <EntitySetMapping Name="Disciplines">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Discipline)">
+        <MappingFragment StoreEntitySet="Disciplines">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Group)">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="YearFormation" ColumnName="YearFormation" />
+          <ScalarProperty Name="SpecialtyId" ColumnName="SpecialtyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specialties">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Specialty)">
+        <MappingFragment StoreEntitySet="Specialties">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Student)">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Teacher)">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartYear" ColumnName="StartYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherDisciplines">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.TeacherDiscipline)">
+        <MappingFragment StoreEntitySet="TeacherDisciplines">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AcademicYearStart" ColumnName="AcademicYearStart" />
+          <ScalarProperty Name="AcademicYearEnd" ColumnName="AcademicYearEnd" />
+          <ScalarProperty Name="TotalHours" ColumnName="TotalHours" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="DisciplineId" ColumnName="DisciplineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -404,7 +402,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

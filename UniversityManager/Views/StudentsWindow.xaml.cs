@@ -36,12 +36,24 @@ namespace UniversityManager.Views
 
         private void listStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            if (listStudents.SelectedItem == null)
+                return;
+
             var student = listStudents.SelectedItem as Student;
             var editor = new StudentEditorWindow(_context, student);
 
             Hide();
             editor.ShowDialog();
+
+            if(editor.DialogResult == true)
+                listStudents.ItemsSource = _context.Students.ToList();
+
             ShowDialog();
+        }
+
+        private void addStudent_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

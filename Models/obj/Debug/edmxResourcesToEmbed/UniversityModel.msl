@@ -2,8 +2,8 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
     <EntitySetMapping Name="Disciplines">
-      <EntityTypeMapping TypeName="UniversityModel.Discipline">
-        <MappingFragment StoreEntitySet="Discipline">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Discipline)">
+        <MappingFragment StoreEntitySet="Disciplines">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Code" ColumnName="Code" />
@@ -11,8 +11,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Groups">
-      <EntityTypeMapping TypeName="UniversityModel.Group">
-        <MappingFragment StoreEntitySet="Group">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Group)">
+        <MappingFragment StoreEntitySet="Groups">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="YearFormation" ColumnName="YearFormation" />
@@ -21,8 +21,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Specialties">
-      <EntityTypeMapping TypeName="UniversityModel.Specialty">
-        <MappingFragment StoreEntitySet="Specialty">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Specialty)">
+        <MappingFragment StoreEntitySet="Specialties">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Code" ColumnName="Code" />
@@ -31,8 +31,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Students">
-      <EntityTypeMapping TypeName="UniversityModel.Student">
-        <MappingFragment StoreEntitySet="Student">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Student)">
+        <MappingFragment StoreEntitySet="Students">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
@@ -44,8 +44,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Teachers">
-      <EntityTypeMapping TypeName="UniversityModel.Teacher">
-        <MappingFragment StoreEntitySet="Teacher">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.Teacher)">
+        <MappingFragment StoreEntitySet="Teachers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
@@ -55,8 +55,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TeacherDisciplines">
-      <EntityTypeMapping TypeName="UniversityModel.TeacherDiscipline">
-        <MappingFragment StoreEntitySet="TeacherDiscipline">
+      <EntityTypeMapping TypeName="IsTypeOf(UniversityModel.TeacherDiscipline)">
+        <MappingFragment StoreEntitySet="TeacherDisciplines">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="AcademicYearStart" ColumnName="AcademicYearStart" />
           <ScalarProperty Name="AcademicYearEnd" ColumnName="AcademicYearEnd" />

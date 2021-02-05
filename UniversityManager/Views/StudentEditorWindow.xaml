@@ -12,12 +12,12 @@
             <StackPanel Margin="7,7,0,0" Orientation="Vertical">
                 <TextBlock TextDecorations="" Text="Имя:" />
                 <TextBox x:Name="nameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
-                
+
                 <TextBlock Text="Фамилия:" />
                 <TextBox x:Name="surnameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
                 <TextBlock Text="Дата рождения:" />
-                <TextBox x:Name="birthdayBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+                <DatePicker x:Name="birthdayPicker" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
                 <TextBlock Text="Пол:" />
                 <ComboBox x:Name="listGenders" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
@@ -26,5 +26,9 @@
                 <ComboBox x:Name="listGroups" MinWidth="150" MaxWidth="150" Margin="15,3,0,5" DisplayMemberPath="Name"/>
             </StackPanel>
         </StackPanel>
+        <Button x:Name="rejectButton" Content="Отменить" HorizontalAlignment="Left" Margin="328,249,0,0" VerticalAlignment="Top" Width="75" Click="rejectButton_Click"/>
+        <Button x:Name="deleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="90,249,0,0" VerticalAlignment="Top" Width="75" Click="deleteButton_Click"/>
+        <Button x:Name="acceptButton" Content="Применить" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75" Click="acceptButton_Click"/>
+
     </Grid>
 </Window>
