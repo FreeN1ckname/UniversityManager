@@ -20,16 +20,18 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class GroupsWindow : Window
     {
-        public GroupsWindow()
+        UniversityEntities _context;
+
+        public GroupsWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var context = new UniversityEntities();
-
-            listGroups.ItemsSource = context.Groups.ToList();
+            listGroups.ItemsSource = _context.Groups.ToList();
         }
     }
 }

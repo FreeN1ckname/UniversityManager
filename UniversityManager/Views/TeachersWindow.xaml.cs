@@ -20,16 +20,18 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class TeachersWindow : Window
     {
-        public TeachersWindow()
+        UniversityEntities _context;
+
+        public TeachersWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var context = new UniversityEntities();
-
-            listTeachers.ItemsSource = context.Teachers.ToList();
+            listTeachers.ItemsSource = _context.Teachers.ToList();
         }
     }
 }

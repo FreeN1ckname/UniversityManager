@@ -1,0 +1,44 @@
+{
+    "student" : {                         // YES
+        "id" : "integer",
+        "photo" : "string",
+        "surname" : "string",
+        "name" : "string",
+        "gender" : "string",
+        "birthday" : "date",
+        "groupId" : "integer"
+    },
+    "group" : {                              // NOT
+        "id" : "integer",
+        "name" :"string",
+        "yearFormation" : "integer",
+        "specialtyId" : "integer"
+    },
+    "specialty" : {                         // NOT
+        "id" : "integer",
+        "name" : "string",
+        "code" : "string",
+        "info" : "string"
+    },
+    "teacher" : {                       // YES
+        "id" : "integer",
+        "photo" : "string",
+        "surname" : "string",
+        "name" : "string",
+        "startYear" : "integer"
+    },
+    "discipline" : {                      // 
+        "id" : "integer",
+        "name" : "string",
+        "code" : "string"
+    },
+    "teacherDisciplines" : {
+        "id" :"integer",
+        "teacherId" : "integer",
+        "disciplineId" : "integer",
+        "academicYearStart" : "integer",
+        "academicYearEnd" : "integer",
+        "groupId" : "integer",
+        "totalHours" : "integer"
+    }
+}

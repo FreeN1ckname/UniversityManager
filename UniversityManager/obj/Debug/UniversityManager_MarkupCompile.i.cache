@@ -9,12 +9,12 @@ UniversityManager
 none
 false
 DEBUG;TRACE
-C:\Users\Student\source\repos\UniversityManager\App.xaml
-7439843103
+
+8807905219
 
 12-1565228433
 17-1250111422
-Views\DisciplinesWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\StudentEditorWindow.xaml;Views\StudentsWindow.xaml;Views\TeachersWindow.xaml;
+App.xaml;Views\DisciplinesWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\StudentEditorWindow.xaml;Views\StudentsWindow.xaml;Views\TeachersWindow.xaml;
 
 True
 

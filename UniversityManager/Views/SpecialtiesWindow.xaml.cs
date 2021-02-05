@@ -20,16 +20,18 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class SpecialtiesWindow : Window
     {
-        public SpecialtiesWindow()
+        UniversityEntities _context;
+
+        public SpecialtiesWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var context = new UniversityEntities();
-
-            listSpecialties.ItemsSource = context.Specialties.ToList();
+            listSpecialties.ItemsSource = _context.Specialties.ToList();
         }
     }
 }

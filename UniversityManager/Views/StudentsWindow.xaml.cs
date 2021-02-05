@@ -20,22 +20,24 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class StudentsWindow : Window
     {
-        public StudentsWindow()
+        UniversityEntities _context;
+
+        public StudentsWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var context = new UniversityEntities();
-
-            listStudents.ItemsSource = context.Students.ToList();
+            listStudents.ItemsSource = _context.Students.ToList();
         }
 
         private void listStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var student = listStudents.SelectedItem as Student;
-            var editor = new StudentEditorWindow(student);
+            var editor = new StudentEditorWindow(_context, student);
 
             Hide();
             editor.ShowDialog();

@@ -22,7 +22,7 @@ namespace UniversityManager.Views
     {
         Student _student;
 
-        public StudentEditorWindow(Student student)
+        public StudentEditorWindow(UniversityEntities context, Student student)
         {
             InitializeComponent();
 
@@ -32,7 +32,12 @@ namespace UniversityManager.Views
             nameBlock.Text = _student.Name;
             surnameBlock.Text = _student.Surname;
             birthdayBlock.Text = _student.Birthday.ToString("d");
+
             listGenders.ItemsSource = new List<string> {"М", "Ж" };
+            listGenders.SelectedItem = _student.Gender;
+
+            listGroups.ItemsSource = context.Groups.ToList();
+            listGroups.SelectedItem = _student.Group;
         }
     }
 }

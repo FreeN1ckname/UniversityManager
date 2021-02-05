@@ -31,3 +31,4 @@ C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\SpecialtiesWindo
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\SpecialtiesWindow.baml
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\StudentEditorWindow.g.cs
 C:\Users\Student\source\repos\UniversityManager\obj\Debug\Views\StudentEditorWindow.baml
+C:\Users\Student\source\repos\UniversityManager\obj\Debug\App.baml

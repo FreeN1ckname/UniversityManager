@@ -5,16 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UniversityManager.Views"
         mc:Ignorable="d"
-        Title="Редактирование" Height="272.244" Width="649.376">
+        Title="Редактирование" Height="319.244" Width="433.376">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <Image x:Name="image" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="223"/>
-            <StackPanel Orientation="Vertical">
-                <TextBlock x:Name="nameBlock"/>
-                <TextBlock x:Name="surnameBlock"/>
-                <TextBlock x:Name="birthdayBlock"/>
-                <ListBox x:Name="listGenders"/>
-                <ListBox x:Name="listGroups"/>
+            <StackPanel Margin="7,7,0,0" Orientation="Vertical">
+                <TextBlock TextDecorations="" Text="Имя:" />
+                <TextBox x:Name="nameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+                
+                <TextBlock Text="Фамилия:" />
+                <TextBox x:Name="surnameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock Text="Дата рождения:" />
+                <TextBox x:Name="birthdayBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock Text="Пол:" />
+                <ComboBox x:Name="listGenders" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock Text="Группа:" />
+                <ComboBox x:Name="listGroups" MinWidth="150" MaxWidth="150" Margin="15,3,0,5" DisplayMemberPath="Name"/>
             </StackPanel>
         </StackPanel>
     </Grid>

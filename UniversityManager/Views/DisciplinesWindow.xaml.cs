@@ -20,15 +20,18 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class DisciplinesWindow : Window
     {
-        public DisciplinesWindow()
+        UniversityEntities _context;
+
+        public DisciplinesWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var context = new UniversityEntities();
-            listTeacherDiscipline.ItemsSource = context.TeacherDisciplines.ToList();
+            listTeacherDiscipline.ItemsSource = _context.TeacherDisciplines.ToList();
         }
     }
 }

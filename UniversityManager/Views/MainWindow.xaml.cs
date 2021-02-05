@@ -21,9 +21,13 @@ namespace UniversityManager.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        UniversityEntities _context;
+
+        public MainWindow(UniversityEntities context)
         {
             InitializeComponent();
+
+            _context = context;
         }
 
         private void ShowWindow(Window window)
@@ -37,31 +41,31 @@ namespace UniversityManager.Views
 
         private void viewStudentsButton_Click(object sender, RoutedEventArgs e)
         {
-            var studentsWindow = new StudentsWindow();
+            var studentsWindow = new StudentsWindow(_context);
             ShowWindow(studentsWindow);
         }
 
         private void viewTeachersButton_Click(object sender, RoutedEventArgs e)
         {
-            var teacherWindow = new TeachersWindow();
+            var teacherWindow = new TeachersWindow(_context);
             ShowWindow(teacherWindow);
         }
 
         private void viewDisciplinesButton_Click(object sender, RoutedEventArgs e)
         {
-            var disciplineWindow = new DisciplinesWindow();
+            var disciplineWindow = new DisciplinesWindow(_context);
             ShowWindow(disciplineWindow);
         }
 
         private void viewGroupsButton_Click(object sender, RoutedEventArgs e)
         {
-            var groupsWindow = new GroupsWindow();
+            var groupsWindow = new GroupsWindow(_context);
             ShowWindow(groupsWindow);
         }
 
         private void viewSpecialtiesButton_Click(object sender, RoutedEventArgs e)
         {
-            var specialtiesWindow = new SpecialtiesWindow();
+            var specialtiesWindow = new SpecialtiesWindow(_context);
             ShowWindow(specialtiesWindow);
         }
     }
