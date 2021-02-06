@@ -1,0 +1,31 @@
+﻿<Window x:Class="UniversityManager.Views.TeacherEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UniversityManager.Views"
+        mc:Ignorable="d"
+        Title="Редактирование" Height="324.636" Width="430.457">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+
+            <Button x:Name="changePhotoButton" HorizontalAlignment="Left" Height="215" Margin="10,10,0,0" VerticalAlignment="Top" Width="215" Click="changePhotoButton_Click">
+                <Image x:Name="image" MouseEnter="image_MouseEnter" MouseLeave="image_MouseLeave"/>
+            </Button>
+            <StackPanel Margin="7,7,0,0" Orientation="Vertical">
+                <TextBlock FontWeight="Bold" Text="Имя:" />
+                <TextBox x:Name="nameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,20"/>
+
+                <TextBlock FontWeight="Bold" Text="Фамилия:" />
+                <TextBox x:Name="surnameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,20"/>
+
+                <TextBlock FontWeight="Bold" Text="Начало работы:" />
+                <DatePicker x:Name="startYearPicker" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="rejectButton" Content="Отменить" HorizontalAlignment="Left" Margin="328,249,0,0" VerticalAlignment="Top" Width="75" Click="rejectButton_Click"/>
+        <Button x:Name="deleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="90,249,0,0" VerticalAlignment="Top" Width="75" Click="deleteButton_Click"/>
+        <Button x:Name="acceptButton" Content="Применить" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="75" Click="acceptButton_Click"/>
+
+    </Grid>
+</Window>

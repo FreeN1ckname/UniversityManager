@@ -5,24 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UniversityManager.Views"
         mc:Ignorable="d"
-        Title="Редактирование" Height="319.244" Width="433.376">
+        Title="Редактирование" Height="319.244" Width="433.376"
+        MaxHeight="319.244" MaxWidth="433.376" MinWidth="433" MinHeight="319.244">
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Image x:Name="image" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="223"/>
+
+            <Button x:Name="changePhotoButton" HorizontalAlignment="Left" Height="215" Margin="10,10,0,0" VerticalAlignment="Top" Width="215" Click="changePhotoButton_Click">
+                <Image x:Name="image" MouseEnter="image_MouseEnter" MouseLeave="image_MouseLeave"/>
+            </Button>
             <StackPanel Margin="7,7,0,0" Orientation="Vertical">
-                <TextBlock TextDecorations="" Text="Имя:" />
+                <TextBlock FontWeight="Bold" Text="Имя:" />
                 <TextBox x:Name="nameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
-                <TextBlock Text="Фамилия:" />
+                <TextBlock FontWeight="Bold" Text="Фамилия:" />
                 <TextBox x:Name="surnameBlock" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
-                <TextBlock Text="Дата рождения:" />
+                <TextBlock FontWeight="Bold" Text="Дата рождения:" />
                 <DatePicker x:Name="birthdayPicker" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
-                <TextBlock Text="Пол:" />
+                <TextBlock FontWeight="Bold" Text="Пол:" />
                 <ComboBox x:Name="listGenders" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
 
-                <TextBlock Text="Группа:" />
+                <TextBlock FontWeight="Bold" Text="Группа:" />
                 <ComboBox x:Name="listGroups" MinWidth="150" MaxWidth="150" Margin="15,3,0,5" DisplayMemberPath="Name"/>
             </StackPanel>
         </StackPanel>

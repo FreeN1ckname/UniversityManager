@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Converters\ImageConverter.cs" />
     <Compile Include="Views\DisciplinesWindow.xaml.cs">
       <DependentUpon>DisciplinesWindow.xaml</DependentUpon>
     </Compile>
@@ -69,11 +70,17 @@
     <Compile Include="Views\SpecialtiesWindow.xaml.cs">
       <DependentUpon>SpecialtiesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SpecialtyEditorWindow.xaml.cs">
+      <DependentUpon>SpecialtyEditorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentEditorWindow.xaml.cs">
       <DependentUpon>StudentEditorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StudentsWindow.xaml.cs">
       <DependentUpon>StudentsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherEditorWindow.xaml.cs">
+      <DependentUpon>TeacherEditorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TeachersWindow.xaml.cs">
       <DependentUpon>TeachersWindow.xaml</DependentUpon>
@@ -102,11 +109,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SpecialtyEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\StudentEditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StudentsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherEditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,9 +158,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\avatar.jpg">
+    <Content Include="Resources\637482190842890673_avatar.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Resources\903.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\avatar.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

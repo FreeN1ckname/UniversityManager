@@ -33,5 +33,36 @@ namespace UniversityManager.Views
         {
             listSpecialties.ItemsSource = _context.Specialties.ToList();
         }
+
+        private void addSpecialty_Click(object sender, RoutedEventArgs e)
+        {
+            Specialty specialty = null;
+            var editor = new SpecialtyEditorWindow(_context, specialty);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listSpecialties.ItemsSource = _context.Specialties.ToList();
+
+            ShowDialog();
+        }
+
+        private void listSpecialties_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (listSpecialties.SelectedItem == null)
+                return;
+
+            var specialty = listSpecialties.SelectedItem as Specialty;
+            var editor = new SpecialtyEditorWindow(_context, specialty);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listSpecialties.ItemsSource = _context.Specialties.ToList();
+
+            ShowDialog();
+        }
     }
 }

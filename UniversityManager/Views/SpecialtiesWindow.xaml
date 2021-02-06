@@ -28,12 +28,13 @@
     </Window.Resources>
 
     <Grid>
-        <ListBox x:Name="listSpecialties" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListBox x:Name="listSpecialties" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,44" MouseDoubleClick="listSpecialties_MouseDoubleClick">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+        <Button x:Name="addStudent" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="110" Click="addSpecialty_Click" Height="28" RenderTransformOrigin="0.5,0.5"/>
     </Grid>
 </Window>

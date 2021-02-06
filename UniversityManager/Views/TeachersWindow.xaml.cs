@@ -33,5 +33,36 @@ namespace UniversityManager.Views
         {
             listTeachers.ItemsSource = _context.Teachers.ToList();
         }
+
+        private void listTeachers_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (listTeachers.SelectedItem == null)
+                return;
+
+            var teacher = listTeachers.SelectedItem as Teacher;
+            var editor = new TeacherEditorWindow(_context, teacher);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listTeachers.ItemsSource = _context.Teachers.ToList();
+
+            ShowDialog();
+        }
+
+        private void addTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            Teacher teacher = null;
+            var editor = new TeacherEditorWindow(_context, teacher);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listTeachers.ItemsSource = _context.Teachers.ToList();
+
+            ShowDialog();
+        }
     }
 }

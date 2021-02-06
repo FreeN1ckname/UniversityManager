@@ -53,7 +53,16 @@ namespace UniversityManager.Views
 
         private void addStudent_Click(object sender, RoutedEventArgs e)
         {
+            Student student = null;
+            var editor = new StudentEditorWindow(_context, student);
 
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listStudents.ItemsSource = _context.Students.ToList();
+
+            ShowDialog();
         }
     }
 }
