@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Student\Desktop\UniversityManager\UniversityManager\obj\Debug\
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\UniversityManager\obj\Debug\
 UniversityManager
 none
 false
 DEBUG;TRACE
 
-101398964180
+12298657965
 3-1906521044
-14-2127853212
-17-1532558107
-App.xaml;Views\DisciplinesWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\SpecialtyEditorWindow.xaml;Views\StudentEditorWindow.xaml;Views\StudentsWindow.xaml;Views\TeacherEditorWindow.xaml;Views\TeachersWindow.xaml;
+16-1199228765
+17-423156183
+App.xaml;Views\DisciplineEditorWindow.xaml;Views\DisciplinesWindow.xaml;Views\GroupEditorWindow.xaml;Views\GroupsWindow.xaml;Views\MainWindow.xaml;Views\SpecialtiesWindow.xaml;Views\SpecialtyEditorWindow.xaml;Views\StudentEditorWindow.xaml;Views\StudentsWindow.xaml;Views\TeacherEditorWindow.xaml;Views\TeachersWindow.xaml;
 
 False
 

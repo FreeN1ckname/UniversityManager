@@ -26,5 +26,10 @@ namespace Models
         public int StartYear { get; set; }
     
         public virtual ICollection<TeacherDiscipline> TeacherDisciplines { get; set; }
+
+        public override string ToString()
+        {
+            return Surname + " " + Name;
+        }
     }
 }

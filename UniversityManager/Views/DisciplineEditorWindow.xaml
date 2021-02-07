@@ -1,0 +1,40 @@
+﻿<Window x:Class="UniversityManager.Views.DisciplineEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UniversityManager.Views"
+        mc:Ignorable="d"
+        Title="Редактирование" Height="278.8" Width="370.4">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="7,7,0,0" Orientation="Vertical">
+                <TextBlock FontWeight="Bold" Text="Название:" />
+                <TextBox x:Name="nameBox" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock FontWeight="Bold" Text="Код:" />
+                <TextBox x:Name="codeBox" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock FontWeight="Bold" Text="Начало академического года:" />
+                <DatePicker x:Name="startAcademicYearPicker" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+
+                <TextBlock FontWeight="Bold" Text="Конец академического года:" />
+                <DatePicker x:Name="endAcademicYearPicker" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="7,7,0,0">
+                <TextBlock FontWeight="Bold" Text="Группа:" />
+                <ComboBox x:Name="listGroups" MinWidth="150" MaxWidth="150" Margin="15,3,0,5" DisplayMemberPath="Name"/>
+
+                <TextBlock FontWeight="Bold" Text="Преподаватель:" />
+                <ComboBox x:Name="listTeachers" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+                
+                <TextBlock FontWeight="Bold" Text="Количество часов:" />
+                <TextBox x:Name="totalHoursBox" MinWidth="150" MaxWidth="150" Margin="15,3,0,5"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="rejectButton" Content="Отменить" HorizontalAlignment="Left" Margin="279,219,0,0" VerticalAlignment="Top" Width="75" Click="rejectButton_Click"/>
+        <Button x:Name="deleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="90,219,0,0" VerticalAlignment="Top" Width="75" Click="deleteButton_Click"/>
+        <Button x:Name="acceptButton" Content="Применить" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75" Click="acceptButton_Click"/>
+
+    </Grid>
+</Window>

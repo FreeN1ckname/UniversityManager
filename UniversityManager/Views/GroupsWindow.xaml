@@ -29,12 +29,13 @@
     </Window.Resources>
 
     <Grid>
-        <ListBox x:Name="listGroups" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListBox x:Name="listGroups" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,-0.4,49" MouseDoubleClick="listGroups_MouseDoubleClick">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+        <Button x:Name="addGroup" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="110" Click="addGroup_Click" Height="28" RenderTransformOrigin="0.5,0.5"/>
     </Grid>
 </Window>

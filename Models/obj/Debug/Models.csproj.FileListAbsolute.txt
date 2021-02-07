@@ -27,3 +27,13 @@ C:\Users\Student\Desktop\UniversityManager\Models\obj\Debug\Models.csproj.CoreCo
 C:\Users\Student\Desktop\UniversityManager\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\Student\Desktop\UniversityManager\Models\obj\Debug\Models.dll
 C:\Users\Student\Desktop\UniversityManager\Models\obj\Debug\Models.pdb
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\bin\Debug\Models.dll.config
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\bin\Debug\Models.dll
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\bin\Debug\Models.pdb
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\bin\Debug\EntityFramework.dll
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\bin\Debug\EntityFramework.xml
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\obj\Debug\Models.dll
+C:\Users\root\Desktop\UniversityManager\finalcommit\UniversityManager\Models\obj\Debug\Models.pdb

@@ -61,8 +61,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Converters\ImageConverter.cs" />
+    <Compile Include="Views\DisciplineEditorWindow.xaml.cs">
+      <DependentUpon>DisciplineEditorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DisciplinesWindow.xaml.cs">
       <DependentUpon>DisciplinesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupEditorWindow.xaml.cs">
+      <DependentUpon>GroupEditorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GroupsWindow.xaml.cs">
       <DependentUpon>GroupsWindow.xaml</DependentUpon>
@@ -85,7 +91,15 @@
     <Compile Include="Views\TeachersWindow.xaml.cs">
       <DependentUpon>TeachersWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\DisciplineEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DisciplinesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GroupEditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

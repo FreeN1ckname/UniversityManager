@@ -44,13 +44,14 @@
     </Window.Resources>
 
     <Grid>
-        <ListBox x:Name="listTeacherDiscipline" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListBox x:Name="listDisciplines" ItemTemplate="{StaticResource listTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,-0.4,50" MouseDoubleClick="listDisciplines_MouseDoubleClick">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+        <Button x:Name="addDiscipline" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="110" Click="addDiscipline_Click" Height="28" RenderTransformOrigin="0.5,0.5"/>
     </Grid>
 
 </Window>

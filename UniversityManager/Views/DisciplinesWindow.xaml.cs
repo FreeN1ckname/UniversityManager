@@ -31,7 +31,42 @@ namespace UniversityManager.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            listTeacherDiscipline.ItemsSource = _context.TeacherDisciplines.ToList();
+            listDisciplines.ItemsSource = _context.TeacherDisciplines.ToList();
+        }
+
+        private void addDiscipline_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherDiscipline discipline = null;
+            Discipline currentDiscipline = null;
+
+            var editor = new DisciplineEditorWindow(_context, discipline, currentDiscipline);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listDisciplines.ItemsSource = _context.TeacherDisciplines.ToList();
+
+            ShowDialog();
+        }
+
+        private void listDisciplines_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (listDisciplines.SelectedItem == null)
+                return;
+
+            var discipline = listDisciplines.SelectedItem as TeacherDiscipline;
+            var currentDiscipline = discipline.Discipline;
+
+            var editor = new DisciplineEditorWindow(_context, discipline, currentDiscipline);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listDisciplines.ItemsSource = _context.TeacherDisciplines.ToList();
+
+            ShowDialog();
         }
     }
 }

@@ -33,5 +33,36 @@ namespace UniversityManager.Views
         {
             listGroups.ItemsSource = _context.Groups.ToList();
         }
+
+        private void addGroup_Click(object sender, RoutedEventArgs e)
+        {
+            Group group = null;
+            var editor = new GroupEditorWindow(_context, group);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listGroups.ItemsSource = _context.Groups.ToList();
+
+            ShowDialog();
+        }
+
+        private void listGroups_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (listGroups.SelectedItem == null)
+                return;
+
+            var group = listGroups.SelectedItem as Group;
+            var editor = new GroupEditorWindow(_context, group);
+
+            Hide();
+            editor.ShowDialog();
+
+            if (editor.DialogResult == true)
+                listGroups.ItemsSource = _context.Groups.ToList();
+
+            ShowDialog();
+        }
     }
 }

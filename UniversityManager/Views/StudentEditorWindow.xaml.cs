@@ -122,7 +122,6 @@ namespace UniversityManager.Views
         private void changePhotoButton_Click(object sender, RoutedEventArgs e)
         {
             var dialogPhoto = new OpenFileDialog();
-            //dialogPhoto.ShowDialog();
 
             if (dialogPhoto.ShowDialog() == true)
             {
@@ -132,7 +131,6 @@ namespace UniversityManager.Views
 
                 image.Source = new BitmapImage(new Uri(photoPath, UriKind.RelativeOrAbsolute));
             }
-
         }
     }
 }
